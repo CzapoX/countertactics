@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.Extensions.Localization
+@inject NavigationManager Navigation
+@inject IStringLocalizer<App> Localizer
+
+<AuthorizeView>
+    <Authorized>
+        <MudText Class="d-flex justify-center align-center">
+            @Localizer.GetString(nameof(App_en_US.LoggedAs)) :
+            <MudMenu FullWidth="true" ActivationEvent="@MouseEvent.MouseOver" AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopCenter">
+                <ActivatorContent>
+                    <MudChip Icon="@Icons.Material.Filled.Person" Color="Color.Tertiary">@context.User.Identity?.Name</MudChip>
+                </ActivatorContent>
+                <ChildContent>
+                    <MudMenuItem OnClick="@(BeginEditProfile)">@Localizer.GetString(nameof(App_en_US.Profile))</MudMenuItem>
+                    <MudMenuItem OnClick="@(BeginLogOut)">@Localizer.GetString(nameof(App_en_US.LogOut))</MudMenuItem>
+                </ChildContent>
+            </MudMenu>
+        </MudText>
+    </Authorized>
+    <NotAuthorized>
+        <MudLink href="authentication/login">Log in</MudLink>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code{
+
+    private void BeginEditProfile()
+    {
+        Navigation.NavigateTo("authentication/profile");
+    }
+
+    private void BeginLogOut()
+    {
+        Navigation.NavigateToLogout("authentication/logout");
+    }
+
+}

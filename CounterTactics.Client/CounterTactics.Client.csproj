@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+        <WarningsAsErrors>Nullable</WarningsAsErrors>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
+        <PackageReference Include="FluentValidation" Version="11.6.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="7.0.9" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.9" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.9" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.Authentication.WebAssembly.Msal" Version="7.0.9" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.9" />
+        <PackageReference Include="MudBlazor" Version="6.7.0" />
+        <PackageReference Include="Refit" Version="7.0.0" />
+        <PackageReference Include="Refit.HttpClientFactory" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\CounterTactics.Shared\CounterTactics.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Resources\App.en-US.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>App.en-US.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Resources\App.pl-PL.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>App.pl-PL.resx</DependentUpon>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Update="Resources\App.en-US.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>App.en-US.Designer.cs</LastGenOutput>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Resources\App.pl-PL.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>App.pl-PL.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Update="wwwroot\appsettings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+</Project>

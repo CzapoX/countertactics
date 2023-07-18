@@ -1,0 +1,11 @@
+﻿@page "/"
+@using PolWro.Client.ApiClient
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject IApiClient Client
+
+<MudText Typo="Typo.h2">Counter Tactics</MudText>
+<AuthorizeView>
+    <Authorized>
+        <MudButton OnClick="async () => { try {await Client.TestAsync(); }catch (AccessTokenNotAvailableException e){Console.WriteLine(e); e.Redirect(); } }">Test</MudButton>
+    </Authorized>
+</AuthorizeView>

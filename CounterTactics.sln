@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterTactics.Api", "CounterTactics.Api\CounterTactics.Api.csproj", "{870C6EF1-5E71-4D53-8023-209424813B72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterTactics.Shared", "CounterTactics.Shared\CounterTactics.Shared.csproj", "{29D38773-B6D6-4E27-8CA1-B6F6902E6E40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterTactics.Client", "CounterTactics.Client\CounterTactics.Client.csproj", "{6100A1E3-302D-43A8-8F8B-7B7B41CE97EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{870C6EF1-5E71-4D53-8023-209424813B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870C6EF1-5E71-4D53-8023-209424813B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870C6EF1-5E71-4D53-8023-209424813B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870C6EF1-5E71-4D53-8023-209424813B72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D38773-B6D6-4E27-8CA1-B6F6902E6E40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D38773-B6D6-4E27-8CA1-B6F6902E6E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D38773-B6D6-4E27-8CA1-B6F6902E6E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D38773-B6D6-4E27-8CA1-B6F6902E6E40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6100A1E3-302D-43A8-8F8B-7B7B41CE97EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6100A1E3-302D-43A8-8F8B-7B7B41CE97EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6100A1E3-302D-43A8-8F8B-7B7B41CE97EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6100A1E3-302D-43A8-8F8B-7B7B41CE97EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

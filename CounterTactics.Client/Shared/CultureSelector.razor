@@ -1,0 +1,7 @@
+﻿@using CounterTactics.Client.Extensions
+<MudMenu Icon="@Icons.Material.Outlined.Translate" Color="Color.Inherit" Direction="Direction.Bottom" OffsetY="true" Dense="true">
+    @foreach (var supportedCulture in Localization.SupportedCultures)
+    {
+        <MudMenuItem OnClick="@(_ => ChangeCulture(supportedCulture))">@supportedCulture.DisplayName</MudMenuItem>
+    }
+</MudMenu>

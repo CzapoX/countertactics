@@ -1,0 +1,24 @@
+﻿@using Microsoft.Extensions.Localization
+@using CounterTactics.Shared.Constants
+@inject IStringLocalizer<App> Localizer
+
+<MudNavMenu>
+    <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">
+        @Localizer.GetString(nameof(App_en_US.Home))
+    </MudNavLink>
+    <AuthorizeView Roles="@RoleNames.Admin">
+        @* <MudNavLink Href="@ApiEndpoints.AdminPanel" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AdminPanelSettings"> *@
+        @*     @Localizer.GetString(nameof(App_en_US.AdminPanel)) *@
+        @* </MudNavLink> *@
+    </AuthorizeView>
+    <MudDivider/>
+    @* <MudNavLink Href="@Routes.Classes" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Add"> *@
+    @*     @Localizer.GetString(nameof(App_en_US.Classes)) *@
+    @* </MudNavLink> *@
+    @* <MudNavLink Href="@Routes.Teachers" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.People"> *@
+    @*     @Localizer.GetString(nameof(App_en_US.Teachers)) *@
+    @* </MudNavLink> *@
+    @* <MudNavLink Href="@Routes.Faculties" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Home"> *@
+    @*     @Localizer.GetString(nameof(App_en_US.Faculties)) *@
+    @* </MudNavLink> *@
+</MudNavMenu>

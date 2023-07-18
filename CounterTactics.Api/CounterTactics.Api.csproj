@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <WarningsAsErrors>Nullable</WarningsAsErrors>
+        <UserSecretsId>a98a73f5-0862-4019-89b6-cc57a3e58df2</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Marten.AspNetCore" Version="6.0.4" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.9" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.9" />
+        <PackageReference Include="Microsoft.Graph" Version="5.18.0" />
+        <PackageReference Include="Microsoft.Identity.Web" Version="2.13.0" />
+        <PackageReference Include="Microsoft.Identity.Web.GraphServiceClient" Version="2.13.0" />
+        <PackageReference Include="MiniValidation" Version="0.8.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
+        <PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
+        <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\CounterTactics.Shared\CounterTactics.Shared.csproj" />
+    </ItemGroup>
+
+</Project>
